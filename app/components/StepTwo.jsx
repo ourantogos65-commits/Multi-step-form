@@ -1,13 +1,16 @@
-"use client"
 
+
+
+"use client"
 import { HandleOnInput } from "./HandleOnInput"
- export const StepTwo=()=>{
-return(
+
+export const StepTwo = ({ errors, setErrors }) => {
+  return (
     <div>
-              <HandleOnInput type={"email"} placeholder={"Your email "} text={"Email"} />
-                 <HandleOnInput type={"tel"} placeholder={"Your phone number"} text={"Phone number"} />
-                 <HandleOnInput type={"password"} placeholder={"Your password"} text={"Password"} />
-                 <HandleOnInput type={"password"} placeholder={"Confirm password"} text={"Confirm password"} />
+      <HandleOnInput id="email" name="email" type="email" text="Email" placeholder="Your email" errors={errors} setErrors={setErrors} />
+      <HandleOnInput id="number" name="number" type="tel" text="Phone number" placeholder="Your phone number" errors={errors} setErrors={setErrors} />
+      <HandleOnInput id="pass" name="pass" type="password" text="password" placeholder="Your password" errors={errors} setErrors={setErrors} />
+      <HandleOnInput id="Confirmpass" name="Confirmpass" type="password" text="Confirm password" placeholder="Confirm password" errors={errors} setErrors={setErrors} />
     </div>
-)
- }
+  )
+}

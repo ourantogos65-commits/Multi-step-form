@@ -1,17 +1,13 @@
+
 "use client"
 import { HandleOnInput } from "./HandleOnInput"
- export const StepOne=()=>{
-return(
+
+export const StepOne = ({ errors, setErrors }) => {
+  return (
     <div>
-        
-         <HandleOnInput placeholder={"Your first name "} text={"First name"} />
-         <HandleOnInput placeholder={"Your last name "} text={"Last name"} />
-         <HandleOnInput placeholder={"Your username "} text={"Username"} />
-   
-
-    
+      <HandleOnInput id="firstname" name="firstname" type="text" text="First name" placeholder="Your first name" errors={errors} setErrors={setErrors} />
+      <HandleOnInput id="lastname" name="lastname" type="text" text="Last name" placeholder="Your last name" errors={errors} setErrors={setErrors} />
+      <HandleOnInput id="username" name="username" type="text" text="Username" placeholder="Your username" errors={errors} setErrors={setErrors} />
     </div>
-   
-
-)
- }
+  )
+}

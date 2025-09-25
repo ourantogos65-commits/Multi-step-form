@@ -1,15 +1,11 @@
 "use client"
 import { HandleOnInput } from "./HandleOnInput"
- export const StepThree=()=>{
+ export const StepThree=({errors,setErrors})=>{
 return(
     <div >
-     <HandleOnInput type={"date"} placeholder={"-- / -- / -- "} text={"Date of birth"} />
-
-        <HandleOnInput type={"file"}  text={"Profile image"} />
-
-     
-     
-   
+        
+        <HandleOnInput  id="birth"  name="birth"  type="date" placeholder="-- / -- / -- " text="Date of birth" errors={errors} setErrors={setErrors}/>
+        <HandleOnInput  id="file"  name="file" type="file"  text="Profile image" errors={errors} setErrors={setErrors} />
     </div>
 )
  }
